@@ -32,8 +32,7 @@
 %
 % For tracking purposes - this is V3.1SP - APRIL 2009
 
-%\documentclass[a4paper,11pt,twocolumn]{report}
-\documentclass[a4paper,11pt]{report}
+\documentclass{acm_proc_article-sp}
 
 % Danske udtryk (fx figur og tabel) samt dansk orddeling og fonte med
 % danske tegn. Hvis LaTeX brokker sig over æ, ø og å skal du udskifte
@@ -41,25 +40,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage[margin=20mm]{geometry}
-
-\usepackage{titling}
-\newcommand{\subtitle}[1]{%
-	\posttitle{%
-	\par\end{center}
-	\begin{center}\large#1\end{center}
-	\vskip0.5em}%
-}
-
-\usepackage{titlesec}
-
-\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
-
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-\makeatother
 
 \begin{document}
 
@@ -90,36 +70,36 @@
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-%\numberofauthors{4} 
+\numberofauthors{4} 
 \author{
-%\alignauthor
+\alignauthor
 Simon Alexander Alsing\\
-       \texttt{STUD.NR. 201304202}\\
-       \texttt{Group: Hvor Er Salban?}\\
-       \texttt{aalsing@gmail.com}
-%\\[3ex]
-\and
-%\alignauthor
+       \affaddr{STUD.NR. 201304202}\\
+       \affaddr{Group: Hvor Er Salban?}\\
+       \email{aalsing@gmail.com}
+\alignauthor
 Salban Karuvalthamby\\
-       \texttt{STUD.NR. 201304214}\\
-       \texttt{Group: Hvor Er Salban?}\\
-       \texttt{salban\_k@hotmail.com}
+       \affaddr{STUD.NR. 201304214}\\
+       \affaddr{Group: Hvor Er Salban?}\\
+       \email{salban\_k@hotmail.com}
 \and % go to new row
-%\alignauthor
+\alignauthor
 Daniel Graungaard\\
-       \texttt{STUD.NR. 201304191}\\
-       \texttt{Group: Hvor Er Salban?}\\
-       \texttt{daniel@graungaard.com}
-%\\[3ex]
-\and
-%\alignauthor
+       \affaddr{STUD.NR. 201304191}\\
+       \affaddr{Group: Hvor Er Salban?}\\
+       \email{daniel@graungaard.com}
+\alignauthor
 Markus Andreassen\\
-       \texttt{STUD.NR. 201304194}\\
-       \texttt{Group: Hvor Er Salban?}\\
-       \texttt{markusandreassen1994@gmail.com}
+       \affaddr{STUD.NR. 201304194}\\
+       \affaddr{Group: Hvor Er Salban?}\\
+       \email{markusandreassen1994@gmail.com}
 }
 
 \maketitle
+
+\onecolumn
+
+\Large
 
 \input{./tex/abstract.tex}
 
@@ -169,6 +149,6 @@ Markus Andreassen\\
 % This next section command marks the start of
 % Appendix B, and does not continue the present hierarchy
 \input{./tex/appendixb.tex}
-%\balancecolumns
+\balancecolumns
 % That's all folks!
 \end{document}
